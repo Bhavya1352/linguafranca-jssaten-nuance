@@ -15,12 +15,12 @@ const Hero = () => {
       <div 
         className="absolute inset-0 z-0"
         style={{
-          backgroundImage: `url(${heroImage})`,
+          backgroundImage: `url(/bg2.jpg)`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-background/95 via-background/85 to-background/95" />
+        <div className="absolute inset-0 bg-black/30" />
       </div>
       
       {/* Particle Background */}
@@ -32,7 +32,7 @@ const Hero = () => {
       {/* Content */}
       <div className="container relative z-10 px-4 py-20 md:py-32">
         <motion.div 
-          className="max-w-5xl mx-auto text-center space-y-8 backdrop-blur-sm bg-white/5 rounded-3xl p-8 border border-white/10 shadow-2xl"
+          className="max-w-3xl mx-auto text-center space-y-6 backdrop-blur-md bg-white/95 rounded-xl p-8 border border-gray-200 shadow-xl"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
@@ -52,7 +52,7 @@ const Hero = () => {
               transition={{ type: "spring", stiffness: 300 }}
             />
             <motion.h1 
-              className="font-playfair text-4xl md:text-6xl lg:text-7xl font-bold text-foreground tracking-tight whitespace-nowrap"
+              className="font-cormorant text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 tracking-wide whitespace-nowrap"
               initial={{ x: -50, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.4 }}
@@ -63,7 +63,7 @@ const Hero = () => {
           
           {/* Subtitle */}
           <motion.p 
-            className="font-poppins text-xl md:text-3xl text-muted-foreground font-light tracking-wide"
+            className="font-literary text-xl md:text-2xl text-gray-700 font-normal tracking-wide"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
