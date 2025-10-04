@@ -30,6 +30,7 @@ const Navbar = () => {
             <button onClick={() => scrollToSection('why-join')} className="text-gray-700 hover:text-primary transition-colors">Why Join</button>
             <button onClick={() => scrollToSection('poetry')} className="text-gray-700 hover:text-primary transition-colors">Poetry</button>
             <button onClick={() => scrollToSection('events')} className="text-gray-700 hover:text-primary transition-colors">Events</button>
+            <button onClick={() => navigate('/core-team')} className="text-gray-700 hover:text-primary transition-colors">Core</button>
             <Button onClick={() => scrollToSection('join-form')} size="sm">Join Now</Button>
           </div>
 
@@ -51,6 +52,7 @@ const Navbar = () => {
               <button onClick={() => scrollToSection('why-join')} className="block w-full text-left px-3 py-2 text-gray-700 hover:text-primary">Why Join</button>
               <button onClick={() => scrollToSection('poetry')} className="block w-full text-left px-3 py-2 text-gray-700 hover:text-primary">Poetry</button>
               <button onClick={() => scrollToSection('events')} className="block w-full text-left px-3 py-2 text-gray-700 hover:text-primary">Events</button>
+              <button onClick={() => navigate('/core-team')} className="block w-full text-left px-3 py-2 text-gray-700 hover:text-primary">Core</button>
               <div className="px-3 py-2">
                 <Button onClick={() => scrollToSection('join-form')} size="sm" className="w-full">Join Now</Button>
               </div>
