@@ -66,12 +66,7 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Copyright */}
-        <div className="pt-8 border-t border-border text-center">
-          <p className="font-poppins text-sm text-muted-foreground">
-            © 2024 Lingua Franca - JSSATEN Noida. All rights reserved.
-          </p>
-        </div>
+
       </div>
     </footer>
   );

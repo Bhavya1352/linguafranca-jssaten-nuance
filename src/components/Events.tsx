@@ -6,49 +6,24 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { Calendar, MapPin, Users } from "lucide-react";
+
 import Autoplay from "embla-carousel-autoplay";
 
 const events = [
   {
-    title: "Poetry Slam",
-    description: "Unleash your inner poet in our open mic poetry competition",
-    date: "15th November 2024",
-    location: "College Auditorium",
-    participants: "50+ participants",
-    image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=800&auto=format&fit=crop",
+    title: "Youth Parliament",
+    description: "Where young minds debate, lead, and shape the spirit of democracy",
+    image: "/placeholder.svg",
   },
   {
-    title: "Literary Fest",
-    description: "Annual celebration of literature with workshops, debates, and performances",
-    date: "20-22nd December 2024",
-    location: "Main Campus",
-    participants: "200+ attendees",
-    image: "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=800&auto=format&fit=crop",
+    title: "Chemprakriti",
+    description: "Chemistry is a part of nature and this is your chance to come forth and express your opinions!",
+    image: "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=800&auto=format&fit=crop",
   },
   {
-    title: "Creative Writing Workshop",
-    description: "Master the art of storytelling with professional authors",
-    date: "5th January 2025",
-    location: "Seminar Hall",
-    participants: "30 seats",
-    image: "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&auto=format&fit=crop",
-  },
-  {
-    title: "Book Club Meet",
-    description: "Monthly gathering to discuss contemporary literature",
-    date: "Every 1st Saturday",
-    location: "Library Reading Room",
-    participants: "Open to all",
-    image: "https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=800&auto=format&fit=crop",
-  },
-  {
-    title: "Debate Competition",
-    description: "Sharpen your argumentative skills in thought-provoking debates",
-    date: "28th January 2025",
-    location: "Conference Hall",
-    participants: "16 teams",
-    image: "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=800&auto=format&fit=crop",
+    title: "Corporate Competence",
+    description: "Mock interviews and Aptitude tests to prepare you for everything that's to come!",
+    image: "/placeholder.svg",
   },
 ];
 
@@ -84,11 +59,12 @@ const Events = () => {
                   <div className="p-1">
                     <Card className="group overflow-hidden border-2 border-border hover:border-primary/40 transition-all duration-300 hover:shadow-[0_8px_30px_hsl(var(--primary)/0.2)]">
                       <div className="relative h-48 overflow-hidden">
-                        <img
-                          src={event.image}
-                          alt={event.title}
-                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                        />
+                        <div className="w-full h-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
+                          <div className="text-center p-4">
+                            <div className="text-4xl mb-2">🎯</div>
+                            <div className="text-sm font-medium text-foreground">{event.title}</div>
+                          </div>
+                        </div>
                         <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent" />
                       </div>
                       <CardHeader>
@@ -97,23 +73,9 @@ const Events = () => {
                         </CardTitle>
                       </CardHeader>
                       <CardContent className="space-y-3">
-                        <p className="font-poppins text-sm text-muted-foreground">
+                        <p className="font-poppins text-sm text-muted-foreground leading-relaxed">
                           {event.description}
                         </p>
-                        <div className="space-y-2 pt-2">
-                          <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                            <Calendar className="h-4 w-4 text-primary" />
-                            <span className="font-poppins">{event.date}</span>
-                          </div>
-                          <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                            <MapPin className="h-4 w-4 text-primary" />
-                            <span className="font-poppins">{event.location}</span>
-                          </div>
-                          <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                            <Users className="h-4 w-4 text-primary" />
-                            <span className="font-poppins">{event.participants}</span>
-                          </div>
-                        </div>
                       </CardContent>
                     </Card>
                   </div>
