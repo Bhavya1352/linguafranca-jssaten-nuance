@@ -45,7 +45,7 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <motion.img 
-              src="/logo.jpg" 
+              src="/logo1.jpg" 
               alt="Lingua Franca Logo" 
               className="h-28 md:h-36 lg:h-44 w-auto rounded-full shadow-2xl"
               whileHover={{ scale: 1.1, rotate: 5 }}
