@@ -10,29 +10,12 @@ const Hero = () => {
   const navigate = useNavigate();
   
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image with Overlay */}
-      <div 
-        className="absolute inset-0 z-0"
-        style={{
-          backgroundImage: `url(/bg2.jpg)`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      >
-        <div className="absolute inset-0 bg-black/30" />
-      </div>
-      
-      {/* Particle Background */}
-      <ParticleBackground />
-      
-      {/* Floating Elements */}
-      <FloatingElements />
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-amber-50">
 
       {/* Content */}
       <div className="container relative z-10 px-4 py-20 md:py-32">
         <motion.div 
-          className="max-w-3xl mx-auto text-center space-y-6 backdrop-blur-md bg-white/95 rounded-xl p-8 border border-gray-200 shadow-xl"
+          className="max-w-3xl mx-auto text-center space-y-6 bg-amber-800/20 rounded-xl p-8 border border-amber-700 shadow-xl"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
@@ -52,7 +35,7 @@ const Hero = () => {
               transition={{ type: "spring", stiffness: 300 }}
             />
             <motion.h1 
-              className="font-cormorant text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 tracking-wide whitespace-nowrap"
+              className="font-cormorant text-4xl md:text-6xl lg:text-7xl font-bold text-amber-900 tracking-wide whitespace-nowrap"
               initial={{ x: -50, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.4 }}
@@ -63,7 +46,7 @@ const Hero = () => {
           
           {/* Subtitle */}
           <motion.p 
-            className="font-literary text-xl md:text-2xl text-gray-700 font-normal tracking-wide"
+            className="font-literary text-xl md:text-2xl text-amber-900 font-normal tracking-wide"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
@@ -113,7 +96,7 @@ const Hero = () => {
 
           {/* Quote */}
           <div className="pt-8 max-w-2xl mx-auto">
-            <p className="font-playfair text-lg md:text-xl italic text-muted-foreground/80">
+            <p className="font-playfair text-lg md:text-xl italic text-amber-900">
               "Where words weave magic and stories come alive"
             </p>
           </div>
