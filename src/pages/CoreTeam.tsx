@@ -2,18 +2,18 @@ import { Card, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion";
 
 const coreMembers = [
-  { name: "Member Name 1", position: "President", instagram: "@member1" },
-  { name: "Member Name 2", position: "Vice President", instagram: "@member2" },
-  { name: "Member Name 3", position: "Secretary", instagram: "@member3" },
-  { name: "Member Name 4", position: "Treasurer", instagram: "@member4" },
-  { name: "Member Name 5", position: "Event Coordinator", instagram: "@member5" },
-  { name: "Member Name 6", position: "Creative Head", instagram: "@member6" },
-  { name: "Member Name 7", position: "Technical Lead", instagram: "@member7" },
-  { name: "Member Name 8", position: "Public Relations", instagram: "@member8" },
-  { name: "Member Name 9", position: "Content Writer", instagram: "@member9" },
-  { name: "Member Name 10", position: "Social Media Manager", instagram: "@member10" },
-  { name: "Member Name 11", position: "Workshop Coordinator", instagram: "@member11" },
-  { name: "Member Name 12", position: "Alumni Relations", instagram: "@member12" }
+  { name: "Shivesh Srivastava", position: "President", instagram: "https://www.instagram.com/shivesh._17/" },
+  { name: "Ruhani Singh", position: "Vice President", instagram: "https://www.instagram.com/ruhanii_singh01/" },
+  { name: "Vageesh Choudhary", position: "CTC", instagram: "http://instagram.com/vageessh/" },
+  { name: "Mantavya Misra", position: "Co-CTC", instagram: "https://www.instagram.com/misra_mantav/" },
+  { name: "Vishal Aditya", position: "Co-Secretary", instagram: "https://www.instagram.com/adityaafrrr/" },
+  { name: "Anant Jain", position: "YP Coordinator", instagram: "https://www.instagram.com/anant.1006/" },
+  { name: "Vaibhav Yadav", position: "Management Head", instagram: "https://www.instagram.com/vaibhavyadavv07/" },
+  { name: "Aditya Mehrotra", position: "Editorial Head", instagram: "https://www.instagram.com/aditya.mehrotra.737/" },
+  { name: "Raghav Raturi", position: "Technical Head", instagram: "https://www.instagram.com/p/DNqqFDAy_Lp/" },
+  { name: "Tarushi Sharma", position: "Creative Head", instagram: "https://www.instagram.com/_tarushii/" },
+  { name: "Harsh Nayyar", position: "Marketing Head", instagram: "https://www.instagram.com/harsh_nayyar13/" },
+  { name: "Sayyam Verma", position: "Designing Head", instagram: "https://www.instagram.com/p/DNqpnILyyQL/" }
 ];
 
 const CoreTeam = () => {
