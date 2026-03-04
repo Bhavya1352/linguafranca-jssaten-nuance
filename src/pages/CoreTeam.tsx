@@ -18,9 +18,9 @@ const coreMembers = [
 
 const CoreTeam = () => {
   return (
-    <div className="min-h-screen pt-20 bg-amber-50">
-      <div className="container mx-auto px-4 py-12">
-        <div className="bg-amber-100/80 rounded-xl p-8 shadow-xl border border-amber-200">
+    <div className="min-h-screen pt-14 bg-amber-50">
+      <div className="container mx-auto px-4 py-4 md:py-12">
+        <div className="bg-amber-100/80 rounded-xl p-4 md:p-8 shadow-xl border border-amber-200">
           <motion.div
             className="text-center mb-12"
             initial={{ opacity: 0, y: 30 }}

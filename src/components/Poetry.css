@@ -1,0 +1,162 @@
+/* ========================================
+   Poetry — Literary Theme
+   ======================================== */
+
+.poetry {
+    padding: 5rem 0;
+    background: var(--lit-parchment);
+}
+
+.poetry__container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.poetry__wrapper {
+    background: hsl(var(--card));
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: var(--shadow-elevated);
+    border: 1px solid hsl(var(--border));
+}
+
+/* Header */
+.poetry__header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.poetry__title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: var(--lit-burgundy);
+    margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+    .poetry__title {
+        font-size: 3.75rem;
+    }
+}
+
+.poetry__subtitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.125rem;
+    color: var(--lit-ink);
+    max-width: 42rem;
+    margin: 0 auto;
+}
+
+/* Poems Grid */
+.poetry__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 72rem;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .poetry__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.poetry__card {
+    height: 100%;
+    background: hsl(var(--card)) !important;
+    border: 2px solid hsl(var(--border)) !important;
+    transition: all 0.3s ease;
+}
+
+.poetry__card:hover {
+    border-color: var(--lit-gold) !important;
+    box-shadow: var(--shadow-hover);
+}
+
+.poetry__card-content {
+    padding: 2rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.poetry__quote-section {
+    margin-bottom: 1.5rem;
+}
+
+.poetry__quote-mark {
+    font-size: 3.75rem;
+    color: rgba(184, 134, 11, 0.3);
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 1rem;
+    line-height: 1;
+}
+
+.poetry__quote-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.125rem;
+    color: var(--lit-ink);
+    line-height: 1.7;
+    font-style: italic;
+    margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .poetry__quote-text {
+        font-size: 1.25rem;
+    }
+}
+
+.poetry__author-section {
+    border-top: 1px solid rgba(184, 134, 11, 0.25);
+    padding-top: 1rem;
+}
+
+.poetry__author-name {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: var(--lit-burgundy);
+    font-size: 1.125rem;
+}
+
+.poetry__poem-name {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.875rem;
+    color: var(--lit-ink);
+    margin-top: 0.25rem;
+    opacity: 0.7;
+}
+
+/* Decorative */
+.poetry__decorative {
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+}
+
+.poetry__decorative-inner {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.poetry__decorative-line-left {
+    height: 1px;
+    width: 5rem;
+    background: linear-gradient(to right, transparent, rgba(184, 134, 11, 0.3));
+}
+
+.poetry__decorative-line-right {
+    height: 1px;
+    width: 5rem;
+    background: linear-gradient(to left, transparent, rgba(184, 134, 11, 0.3));
+}
+
+.poetry__decorative-icon {
+    font-size: 1.5rem;
+}

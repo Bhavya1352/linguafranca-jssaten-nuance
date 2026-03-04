@@ -2,109 +2,90 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* ═══════════════════════════════════════════════════════
+   LINGUA FRANCA — LITERARY DESIGN SYSTEM
+   Colors: Ink Navy · Parchment · Antique Gold · Crimson
+   ═══════════════════════════════════════════════════════ */
 
 @layer base {
   :root {
-    --background: 30 40% 98%;
-    --foreground: 25 25% 15%;
+    /* Parchment-warm background */
+    --background: 38 45% 96%;
+    --foreground: 220 35% 12%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 25 25% 15%;
+    --card: 38 50% 98%;
+    --card-foreground: 220 35% 12%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 25 25% 15%;
+    --popover: 38 50% 98%;
+    --popover-foreground: 220 35% 12%;
 
-    --primary: 340 65% 75%;
-    --primary-foreground: 0 0% 100%;
+    /* Primary — Ink Navy */
+    --primary: 220 55% 22%;
+    --primary-foreground: 38 45% 96%;
 
-    --secondary: 30 55% 92%;
-    --secondary-foreground: 25 25% 15%;
+    /* Secondary — Antique Gold */
+    --secondary: 42 70% 55%;
+    --secondary-foreground: 220 35% 12%;
 
-    --muted: 30 40% 95%;
-    --muted-foreground: 25 15% 45%;
+    /* Muted — aged parchment tint */
+    --muted: 38 30% 90%;
+    --muted-foreground: 220 20% 40%;
 
-    --accent: 350 70% 85%;
-    --accent-foreground: 25 25% 15%;
+    /* Accent — dusty crimson */
+    --accent: 355 60% 45%;
+    --accent-foreground: 38 45% 96%;
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 30 30% 90%;
-    --input: 30 30% 90%;
-    --ring: 340 65% 75%;
+    --border: 38 25% 80%;
+    --input: 38 25% 85%;
+    --ring: 220 55% 22%;
 
-    --radius: 0.75rem;
-    
-    /* Custom brand colors */
-    --champagne: 40 45% 88%;
-    --lace: 20 30% 96%;
-    --rose-beige: 340 40% 90%;
-    --soft-pink: 340 65% 75%;
-    
-    /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(340 65% 75% / 0.1), hsl(30 55% 92% / 0.3));
-    --gradient-accent: linear-gradient(180deg, hsl(350 70% 85%), hsl(340 65% 75%));
-    
-    /* Shadows */
-    --shadow-soft: 0 4px 20px hsl(340 65% 75% / 0.15);
-    --shadow-elegant: 0 10px 40px hsl(340 65% 75% / 0.2);
+    --radius: 0.5rem;
 
-    --sidebar-background: 0 0% 98%;
+    /* ── Brand palette ── */
+    --ink-navy: 220 55% 22%;
+    --gold: 42 70% 50%;
+    --parchment: 38 45% 96%;
+    --old-paper: 38 40% 88%;
+    --crimson: 355 60% 45%;
+    --sepia: 30 35% 55%;
+    --vellum: 40 55% 93%;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
+    /* ── Gradients ── */
+    --gradient-hero: linear-gradient(160deg, hsl(38 45% 96%) 0%, hsl(42 50% 90%) 50%, hsl(38 40% 88%) 100%);
+    --gradient-ink: linear-gradient(135deg, hsl(220 55% 18%), hsl(220 40% 28%));
+    --gradient-gold: linear-gradient(135deg, hsl(42 70% 45%), hsl(38 65% 55%));
+    --gradient-section: linear-gradient(180deg, hsl(38 45% 96%) 0%, hsl(38 35% 92%) 100%);
+    --gradient-dark-section: linear-gradient(180deg, hsl(220 40% 14%) 0%, hsl(220 50% 18%) 100%);
 
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* ── Shadows ── */
+    --shadow-literary: 0 4px 24px hsl(220 55% 22% / 0.12);
+    --shadow-gold: 0 4px 20px hsl(42 70% 50% / 0.25);
+    --shadow-paper: 0 2px 16px hsl(220 30% 10% / 0.08), inset 0 1px 0 hsl(38 60% 98%);
   }
 
   .dark {
-    --background: 25 25% 8%;
-    --foreground: 30 40% 98%;
-
-    --card: 25 25% 10%;
-    --card-foreground: 30 40% 98%;
-
-    --popover: 25 25% 10%;
-    --popover-foreground: 30 40% 98%;
-
-    --primary: 340 65% 75%;
-    --primary-foreground: 0 0% 100%;
-
-    --secondary: 25 20% 15%;
-    --secondary-foreground: 30 40% 98%;
-
-    --muted: 25 20% 15%;
-    --muted-foreground: 30 20% 65%;
-
-    --accent: 350 70% 85%;
-    --accent-foreground: 25 25% 8%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 30 40% 98%;
-
-    --border: 25 20% 20%;
-    --input: 25 20% 20%;
-    --ring: 340 65% 75%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --background: 220 40% 10%;
+    --foreground: 38 45% 92%;
+    --card: 220 35% 13%;
+    --card-foreground: 38 45% 92%;
+    --popover: 220 35% 13%;
+    --popover-foreground: 38 45% 92%;
+    --primary: 42 65% 50%;
+    --primary-foreground: 220 40% 10%;
+    --secondary: 220 30% 20%;
+    --secondary-foreground: 38 45% 92%;
+    --muted: 220 30% 18%;
+    --muted-foreground: 38 25% 65%;
+    --accent: 355 55% 55%;
+    --accent-foreground: 38 45% 92%;
+    --destructive: 0 62% 31%;
+    --destructive-foreground: 38 45% 92%;
+    --border: 220 25% 22%;
+    --input: 220 25% 22%;
+    --ring: 42 65% 50%;
   }
 }
 
@@ -115,5 +96,302 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Poppins', sans-serif;
+    background-image:
+      radial-gradient(circle at 20% 20%, hsl(42 70% 50% / 0.03) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, hsl(220 55% 22% / 0.04) 0%, transparent 50%);
+  }
+
+  /* Ornamental text selection */
+  ::selection {
+    background: hsl(42 70% 50% / 0.35);
+    color: hsl(220 55% 12%);
+  }
+
+  /* Thin elegant scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: hsl(38 40% 92%);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: hsl(220 35% 35%);
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(42 65% 45%);
+  }
+}
+
+/* ═══════════════════════════════════════════════
+   LITERARY UTILITY CLASSES
+   ═══════════════════════════════════════════════ */
+@layer components {
+
+  /* Ornamental divider */
+  .ornament-divider {
+    @apply flex items-center justify-center gap-4 my-8;
+  }
+
+  .ornament-divider::before,
+  .ornament-divider::after {
+    content: '';
+    @apply flex-1 h-px;
+    background: linear-gradient(to right, transparent, hsl(42 70% 50% / 0.6), transparent);
+  }
+
+  /* Parchment card */
+  .card-parchment {
+    background: hsl(var(--vellum));
+    border: 1px solid hsl(42 30% 72%);
+    box-shadow: var(--shadow-paper);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .card-parchment::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(0deg,
+        transparent,
+        transparent 27px,
+        hsl(42 40% 65% / 0.06) 27px,
+        hsl(42 40% 65% / 0.06) 28px);
+    pointer-events: none;
+  }
+
+  /* Ink Navy card */
+  .card-ink {
+    background: var(--gradient-ink);
+    border: 1px solid hsl(220 40% 30%);
+    box-shadow: 0 8px 32px hsl(220 55% 8% / 0.4);
+  }
+
+  /* Gold shimmer button */
+  .btn-literary {
+    background: var(--gradient-gold);
+    color: hsl(220 45% 10%);
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    border: 1px solid hsl(42 60% 40%);
+    box-shadow: 0 2px 12px hsl(42 70% 50% / 0.3), inset 0 1px 0 hsl(42 80% 70% / 0.3);
+    transition: all 0.3s ease;
+  }
+
+  .btn-literary:hover {
+    box-shadow: 0 4px 20px hsl(42 70% 50% / 0.45), inset 0 1px 0 hsl(42 80% 70% / 0.3);
+    transform: translateY(-1px);
+  }
+
+  /* Drop-cap style */
+  .drop-cap::first-letter {
+    font-family: 'Playfair Display', serif;
+    font-size: 4em;
+    float: left;
+    line-height: 0.75;
+    margin-right: 0.08em;
+    color: hsl(var(--ink-navy));
+  }
+
+  /* Section heading style */
+  .heading-literary {
+    font-family: 'Playfair Display', serif;
+    color: hsl(var(--ink-navy));
+    position: relative;
+    display: inline-block;
+  }
+
+  .heading-literary::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 2px;
+    background: var(--gradient-gold);
+    border-radius: 1px;
+  }
+
+  /* Blockquote literary style */
+  .quote-literary {
+    border-left: 3px solid hsl(var(--gold));
+    background: hsl(42 40% 92% / 0.6);
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    position: relative;
+  }
+
+  .quote-literary::before {
+    content: '\201C';
+    position: absolute;
+    top: -10px;
+    left: 12px;
+    font-size: 4rem;
+    line-height: 1;
+    color: hsl(var(--gold));
+    opacity: 0.5;
+    font-family: 'Playfair Display', serif;
+  }
+
+  /* Paper texture overlay */
+  .paper-texture {
+    position: relative;
+  }
+
+  .paper-texture::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+    pointer-events: none;
+  }
+}
+
+/* ═══════════════════════════════════════════════
+   KEYFRAME ANIMATIONS
+   ═══════════════════════════════════════════════ */
+@keyframes ink-drop {
+  0% {
+    transform: scaleY(0) scaleX(0.8);
+    transform-origin: top;
+    opacity: 0;
+  }
+
+  60% {
+    transform: scaleY(1.04) scaleX(0.98);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scaleY(1) scaleX(1);
+    opacity: 1;
+  }
+}
+
+@keyframes quill-write {
+  0% {
+    stroke-dashoffset: 1000;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes page-turn {
+  0% {
+    transform: perspective(600px) rotateY(0deg);
+  }
+
+  50% {
+    transform: perspective(600px) rotateY(-8deg);
+  }
+
+  100% {
+    transform: perspective(600px) rotateY(0deg);
+  }
+}
+
+@keyframes feather-float {
+
+  0%,
+  100% {
+    transform: translateY(0px) rotate(-2deg);
+  }
+
+  33% {
+    transform: translateY(-12px) rotate(2deg);
+  }
+
+  66% {
+    transform: translateY(-6px) rotate(-1deg);
+  }
+}
+
+@keyframes gold-shimmer {
+  0% {
+    background-position: -200% center;
+  }
+
+  100% {
+    background-position: 200% center;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes shimmer {
+  from {
+    background-position: -200% 0;
+  }
+
+  to {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes wax-seal-spin {
+  0% {
+    transform: rotate(0deg) scale(0.8);
+    opacity: 0;
+  }
+
+  100% {
+    transform: rotate(360deg) scale(1);
+    opacity: 1;
   }
 }

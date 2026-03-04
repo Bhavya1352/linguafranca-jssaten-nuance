@@ -1,0 +1,167 @@
+/* ========================================
+   JoinForm — Literary Theme
+   ======================================== */
+
+.join-form {
+    padding: 5rem 0;
+    background: hsl(var(--background));
+}
+
+.join-form__container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.join-form__inner {
+    max-width: 56rem;
+    margin: 0 auto;
+}
+
+/* Header */
+.join-form__header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.join-form__header>*+* {
+    margin-top: 1rem;
+}
+
+.join-form__title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: var(--lit-burgundy);
+}
+
+@media (min-width: 768px) {
+    .join-form__title {
+        font-size: 3.75rem;
+    }
+}
+
+.join-form__subtitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.125rem;
+    color: hsl(var(--muted-foreground));
+}
+
+/* Form Layout */
+.join-form__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+@media (min-width: 768px) {
+    .join-form__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.join-form__card {
+    border: 2px solid hsl(var(--border)) !important;
+}
+
+.join-form__card-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.join-form__card-title-icon {
+    height: 1.5rem;
+    width: 1.5rem;
+    color: var(--lit-burgundy);
+}
+
+.join-form__card-content>*+* {
+    margin-top: 1rem;
+}
+
+.join-form__row-2col {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.join-form__submit-btn {
+    width: 100%;
+}
+
+.join-form__submit-icon {
+    margin-left: 0.5rem;
+    height: 1.25rem;
+    width: 1.25rem;
+    transition: transform 0.3s ease;
+}
+
+.join-form__submit-btn:hover .join-form__submit-icon {
+    transform: translateX(4px);
+}
+
+/* Contact Info Side */
+.join-form__info-section>*+* {
+    margin-top: 1.5rem;
+}
+
+.join-form__info-card {
+    background: hsl(var(--card)) !important;
+    border-color: hsl(var(--border)) !important;
+}
+
+.join-form__info-card-content {
+    padding: 1.5rem;
+}
+
+.join-form__info-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--lit-burgundy);
+}
+
+.join-form__info-items>*+* {
+    margin-top: 0.75rem;
+}
+
+.join-form__info-items {
+    font-size: 0.875rem;
+}
+
+.join-form__info-item-label {
+    color: hsl(var(--muted-foreground));
+}
+
+/* What Happens Next */
+.join-form__next-card {
+    background: hsl(var(--card)) !important;
+    border-color: hsl(var(--border)) !important;
+}
+
+.join-form__next-card-content {
+    padding: 1.5rem;
+}
+
+.join-form__next-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--lit-burgundy);
+}
+
+.join-form__next-steps {
+    font-size: 0.875rem;
+    color: hsl(var(--muted-foreground));
+}
+
+.join-form__next-steps>*+* {
+    margin-top: 0.5rem;
+}
